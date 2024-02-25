@@ -38,7 +38,7 @@ status_choices = (
     )
 
 class EquipmentCreateForm(forms.Form): 
-    room_number = forms.ChoiceField(choices=((str(x), x) for x in range(150,540)), label='Xona raqami', widget=forms.Select(attrs={'class': "form-control"}))
+    room_number = forms.ChoiceField(choices=((str(x), x) for x in range(150,540)), label='Объект', widget=forms.Select(attrs={'class': "form-control"}))
     inventar_number = forms.IntegerField(required=True, label='Идентификационный номер', widget=forms.NumberInput(attrs={'class': "form-control"}))
     model_id = forms.ModelChoiceField(queryset=Model.objects.all(), label='Модель устройства', widget=forms.Select(attrs={'class': "form-control"}))
     responsible_id = forms.ModelChoiceField(queryset=Responsible.objects.all(), label='Ответственный', widget=forms.Select(attrs={'class': "form-control"}))
